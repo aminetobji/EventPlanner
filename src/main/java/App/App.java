@@ -1,7 +1,7 @@
 package App;
 
 import entities.tickets.Ticket;
-import services.TicketService;
+import services.tickets.TicketService;
 
 
 /**
