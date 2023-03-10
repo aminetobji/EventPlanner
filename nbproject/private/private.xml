@@ -2,18 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/hajbr/Downloads/New%20folder%20(67)/jdbc3A32/src/tn/edu/esprit/gui/ModifyEventController.java</file>
-            <file>file:/C:/Users/hajbr/Downloads/New%20folder%20(67)/jdbc3A32/src/tn/edu/esprit/gui/AddEventController.java</file>
-            <file>file:/C:/Users/hajbr/Downloads/New%20folder%20(67)/jdbc3A32/src/tn/edu/esprit/gui/ShowEventController.java</file>
-            <file>file:/C:/Users/hajbr/Downloads/New%20folder%20(67)/jdbc3A32/src/tn/edu/esprit/gui/ShowEvent.fxml</file>
-            <file>file:/C:/Users/hajbr/Downloads/New%20folder%20(67)/jdbc3A32/src/tn/edu/esprit/tests/FXMain.java</file>
-            <file>file:/C:/Users/hajbr/Downloads/New%20folder%20(67)/jdbc3A32/src/tn/edu/esprit/services/ServiceEvenement.java</file>
-            <file>file:/C:/Users/hajbr/Downloads/New%20folder%20(67)/jdbc3A32/src/tn/edu/esprit/entities/categorieevent.java</file>
-            <file>file:/C:/Users/hajbr/Downloads/New%20folder%20(67)/jdbc3A32/src/tn/edu/esprit/gui/DeleteEventController.java</file>
-            <file>file:/C:/Users/hajbr/Downloads/New%20folder%20(67)/jdbc3A32/src/tn/edu/esprit/entities/evenement.java</file>
-            <file>file:/C:/Users/hajbr/Downloads/New%20folder%20(67)/jdbc3A32/src/tn/edu/esprit/gui/AddEvent.fxml</file>
-            <file>file:/C:/Users/hajbr/Downloads/New%20folder%20(67)/jdbc3A32/src/tn/edu/esprit/services/ServiceCategorie.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

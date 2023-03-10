@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="EventPro.jnlp">
+  <information>
+    <title>EventPro</title>
+    <vendor>Cardinal</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="EventPro.jar" size="52456" download="eager" />
+    <jar href="lib\activation.jar" size="60053" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="576586" download="eager" />
+    <jar href="lib\javax.json-1.0.4.jar" size="93323" download="eager" />
+    <jar href="lib\jboss-json-api_1.0_spec-1.0.1.Final.jar" size="32621" download="eager" />
+    <jar href="lib\json-reader-5.2.jar" size="8194" download="eager" />
+    <jar href="lib\json-simple-2.1.2.jar" size="61888" download="eager" />
+    <jar href="lib\mail.jar" size="492819" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="860927" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.25.jar" size="2538365" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.28.jar" size="2588550" download="eager" />
+    <jar href="lib\mysql-connector.jar" size="560826" download="eager" />
+  </resources>
+<security>
+  <all-permissions/>
+</security>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="EventPro" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="pkgfinal.test.Final"  name="EventPro" />
+  <update check="always"/>
+</jnlp>
