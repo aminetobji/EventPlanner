@@ -1,0 +1,26 @@
+{
+    "outlook":{
+        "smtp_server" : "smtp-mail.outlook.com",
+        "port" : 587
+    },
+    "gmail":{
+        "smtp_server":"smtp.gmail.com",
+        "port" : 465
+    },
+    "office365":{
+        "smtp_server":"smtp.office365.com",
+        "port" : 587
+    },
+    "yahoo":{
+        "smtp_server":"smtp.mail.yahoo.com",
+        "port" : 465
+    },
+    "hotmail":{
+        "smtp_server":"smtp.live.com",
+        "port" : 465
+    },
+    "mail":{
+        "smtp_server":"smtp.mail.com",
+        "port" : 587
+    }
+}

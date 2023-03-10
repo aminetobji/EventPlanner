@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgfinal.gui.ModifyEventController">
+   <children>
+      <VBox prefHeight="609.0" prefWidth="250.0" style="-fx-background-color: #007c77;">
+         <children>
+            <Pane prefHeight="106.0" prefWidth="250.0" />
+            <Pane prefHeight="106.0" prefWidth="250.0">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="XING" layoutX="93.0" layoutY="84.0" size="80" text="" wrappingWidth="63.00000134110451" />
+               </children>
+            </Pane>
+            <Label prefHeight="45.0" prefWidth="261.0" text="Update Event" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Pane prefHeight="106.0" prefWidth="250.0" />
+         </children>
+      </VBox>
+      <TextField fx:id="description" layoutX="418.0" layoutY="267.0" prefHeight="34.0" prefWidth="198.0" />
+      <Label layoutX="290.0" layoutY="270.0" text="DESCRIPTION :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button alignment="BASELINE_LEFT" graphicTextGap="18.0" layoutX="378.0" layoutY="516.0" mnemonicParsing="false" onAction="#modifyEvent" prefHeight="53.0" prefWidth="149.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" text="Update" textFill="#ffffffbf" textOverrun="WORD_ELLIPSIS">
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Button>
+      <Label fx:id="feedback" layoutX="290.0" layoutY="453.0" prefHeight="45.0" prefWidth="310.0" text="" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userId" layoutX="418.0" layoutY="117.0" prefHeight="34.0" prefWidth="198.0" />
+      <Label layoutX="291.0" layoutY="121.0" text="ID USER :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="categoryId" layoutX="418.0" layoutY="163.0" prefHeight="34.0" prefWidth="198.0" />
+      <Label layoutX="291.0" layoutY="169.0" text="ID CATEGORY :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nom" layoutX="418.0" layoutY="214.0" prefHeight="34.0" prefWidth="198.0" />
+      <Label layoutX="291.0" layoutY="218.0" text="NOM :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ville" layoutX="418.0" layoutY="317.0" prefHeight="34.0" prefWidth="198.0" />
+      <Label layoutX="293.0" layoutY="322.0" text="VILLE :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="dateEvent" layoutX="417.0" layoutY="370.0" prefHeight="34.0" prefWidth="198.0" />
+      <Label layoutX="293.0" layoutY="376.0" text="DATE EVENT">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="331.0" layoutY="52.0" prefHeight="34.0" prefWidth="149.0" text="Updating : ID =">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="id" layoutX="480.0" layoutY="52.0" prefHeight="34.0" prefWidth="95.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
