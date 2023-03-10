@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="1103.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.event.gui.EventDashController">
+   <children>
+      <VBox prefHeight="556.0" prefWidth="250.0" style="-fx-background-color: #007c77;">
+         <children>
+            <Pane prefHeight="106.0" prefWidth="250.0">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="XING" layoutX="94.0" layoutY="73.0" size="60" text="" wrappingWidth="44.571428298950195" />
+               </children>
+            </Pane>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="18.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="250.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" text="Events" textFill="#f58e45" textOverrun="WORD_ELLIPSIS">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="GROUP" size="20" />
+               </graphic>
+            </Button>
+            <Button fx:id="categories" alignment="BASELINE_LEFT" graphicTextGap="18.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="250.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" text="Categories" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="" size="20" />
+               </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="18.0" mnemonicParsing="false" onAction="#retour" prefHeight="53.0" prefWidth="250.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" text="Retour" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="GEAR" size="20" text="" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="280.0" layoutY="70.0" prefHeight="373.0" prefWidth="795.0">
+         <children>
+            <GridPane prefHeight="363.0" prefWidth="810.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="145.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="145.0" minHeight="0.0" prefHeight="8.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="332.0" minHeight="10.0" prefHeight="330.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TableView fx:id="eventTable" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                    <columns>
+                      <TableColumn fx:id="idColumn" prefWidth="94.0" text="ID" />
+                      <TableColumn fx:id="userIdColumn" prefWidth="111.0" text="ID User" />
+                      <TableColumn fx:id="nomColumn" minWidth="0.0" prefWidth="75.0" text="Nom" />
+                      <TableColumn fx:id="descriptionColumn" prefWidth="141.0" text="Description" />
+                      <TableColumn fx:id="villeColumn" prefWidth="112.0" text="Ville" />
+                       <TableColumn fx:id="categoryIdColumn" prefWidth="114.0" text="ID Categorie" />
+                      <TableColumn fx:id="dateEventColumn" prefWidth="147.0" text="Date" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="rechercher" onAction="#rechercher" prefHeight="62.0" prefWidth="680.0">
+                     <GridPane.margin>
+                        <Insets left="115.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="18.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="116.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" textFill="WHITE">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="20" />
+                     </graphic>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <Button fx:id="add" alignment="BASELINE_LEFT" graphicTextGap="18.0" layoutX="313.0" layoutY="471.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="165.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" text="Add Event" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets left="45.0" />
+         </padding>
+      </Button>
+      <Button fx:id="modify" alignment="BASELINE_LEFT" graphicTextGap="18.0" layoutX="524.0" layoutY="471.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="165.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" text="Update Event" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </Button>
+      <Button alignment="BASELINE_LEFT" graphicTextGap="18.0" layoutX="729.0" layoutY="471.0" mnemonicParsing="false" onAction="#deleteSelected" prefHeight="38.0" prefWidth="165.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" text="Delete Event" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </Button>
+      <Button fx:id="refresh" alignment="BASELINE_LEFT" graphicTextGap="18.0" layoutX="939.0" layoutY="24.0" mnemonicParsing="false" onAction="#refreshFromScene" prefHeight="38.0" prefWidth="136.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" text="Refresh" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="15" />
+         </graphic>
+      </Button>
+      <Button fx:id="rate" alignment="BASELINE_LEFT" graphicTextGap="18.0" layoutX="941.0" layoutY="471.0" mnemonicParsing="false" onAction="#deleteSelected" prefHeight="38.0" prefWidth="85.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" text="Rate" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </Button>
+      <FontAwesomeIconView fill="WHITE" glyphName="HEART" layoutX="941.0" layoutY="498.0" size="18" />
+   </children>
+</AnchorPane>

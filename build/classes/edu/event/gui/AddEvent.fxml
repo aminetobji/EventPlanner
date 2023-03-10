@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.event.gui.AddEventController">
+   <children>
+      <VBox prefHeight="609.0" prefWidth="250.0" style="-fx-background-color: #007c77;">
+         <children>
+            <Pane prefHeight="106.0" prefWidth="250.0" />
+            <Pane prefHeight="106.0" prefWidth="250.0">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="XING" layoutX="93.0" layoutY="84.0" size="80" text="" wrappingWidth="63.00000134110451" />
+               </children>
+            </Pane>
+            <Label prefHeight="45.0" prefWidth="261.0" text="Add Event" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Label>
+            <Pane prefHeight="106.0" prefWidth="250.0">
+               <children>
+                  <ImageView fx:id="event" fitHeight="183.0" fitWidth="250.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="country" fitHeight="67.0" fitWidth="105.0" layoutX="145.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" />
+               </children></Pane>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="18.0" mnemonicParsing="false" onAction="#retour" prefHeight="53.0" prefWidth="149.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" text="Retour" textFill="#ffffffbf" textOverrun="WORD_ELLIPSIS">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TextField fx:id="description" layoutX="418.0" layoutY="267.0" prefHeight="34.0" prefWidth="198.0" />
+      <Label layoutX="290.0" layoutY="270.0" text="DESCRIPTION :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="352.0" layoutY="30.0" prefHeight="34.0" prefWidth="198.0" text="Fill The Data Below">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button alignment="BASELINE_LEFT" graphicTextGap="18.0" layoutX="287.0" layoutY="485.0" mnemonicParsing="false" onAction="#addEvent" prefHeight="53.0" prefWidth="149.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" text="Add" textFill="#ffffffbf" textOverrun="WORD_ELLIPSIS">
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Button>
+      <Label fx:id="feedback" layoutX="290.0" layoutY="453.0" prefHeight="45.0" prefWidth="310.0" text="" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userId" layoutX="418.0" layoutY="117.0" prefHeight="34.0" prefWidth="198.0" />
+      <Label layoutX="291.0" layoutY="121.0" text="ID USER :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="categoryId" layoutX="418.0" layoutY="165.0" prefHeight="34.0" prefWidth="198.0" />
+      <Label layoutX="291.0" layoutY="171.0" text="ID CATEGORY :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nom" layoutX="418.0" layoutY="214.0" prefHeight="34.0" prefWidth="198.0" />
+      <Label layoutX="291.0" layoutY="218.0" text="NOM :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ville" layoutX="418.0" layoutY="317.0" prefHeight="34.0" prefWidth="156.0" />
+      <Label layoutX="293.0" layoutY="322.0" text="VILLE :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="dateEvent" layoutX="417.0" layoutY="367.0" prefHeight="34.0" prefWidth="198.0" />
+      <Label layoutX="293.0" layoutY="373.0" text="DATE EVENT">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="rcountry" alignment="BASELINE_LEFT" graphicTextGap="18.0" layoutX="575.0" layoutY="317.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#loadPicture" prefHeight="34.0" prefWidth="39.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" textFill="#ffffffbf" textOverrun="WORD_ELLIPSIS">
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" layoutX="586.0" layoutY="340.0" size="18" />
+      <Hyperlink fx:id="tlink" layoutX="452.0" layoutY="497.0" onAction="#handleHyperlinkClick" prefHeight="29.0" prefWidth="125.0" text="Post On Twitter" textFill="#56ddff">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Hyperlink>
+      <FontAwesomeIconView fill="#56ddff" glyphName="TWITTER" layoutX="575.0" layoutY="520.0" size="20" wrappingWidth="24.571428298950195" />
+   </children>
+</AnchorPane>

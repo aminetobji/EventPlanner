@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/icons8-bullet-list-30.png</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/TypeProduitGestionController.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/AcceuilleManager.fxml</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/GestionUserFXML.fxml</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/services/ICategory.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/LaboController.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/utils/MailModule.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/utils/ImageDownloader.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/services/ServiceEvent.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/ShowProduit_1.fxml</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/AcceuilleManagerController.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/services/CommandeService.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/services/TypeProduitService.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/utils/DataSource.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/utils/Sessions.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/services/ServiceMedia.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/AcceuilleClient.fxml</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/GestionUserFXMLController.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/entities/User.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/entities/Category.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/services/ProduitService.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/entities/Event.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/ProduitGestion.fxml</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/entities/EventManager.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/CommandeGestion.fxml</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/ProduitGestionController.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/EventDashUser.fxml</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/ShowProduit.fxml</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/ResetPaswordController.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/AcceuilleClientController.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/entities/Admin.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/utils/APIConsumer.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/icons8-user-100.png</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/entities/Commande.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/entities/Produit.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/services/ServiceCategory.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/EventDashUserController.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/ForgotPassword.fxml</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/TypeProduitGestion.fxml</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/CommandeGestionController.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/entities/Client.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/ForgotPasswordController.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/ShowProduitController.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/utils/Data.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/services/ServiceUser.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/entities/typeproduit.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/LaboFXMain.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/services/IEvent.java</file>
+            <file>file:/C:/Users/Amine/Documents/NetBeansProjects/event/src/edu/event/gui/labo.fxml</file>
+        </group>
+    </open-files>
+</project-private>

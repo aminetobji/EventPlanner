@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.event.gui.ModifyCategoryController">
+   <children>
+      <VBox prefHeight="556.0" prefWidth="287.0" style="-fx-background-color: #007c77;">
+         <children>
+            <Pane prefHeight="106.0" prefWidth="250.0" />
+            <Pane prefHeight="106.0" prefWidth="250.0">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="XING" layoutX="110.0" layoutY="84.0" size="80" text="" wrappingWidth="63.00000134110451" />
+               </children>
+            </Pane>
+            <Label prefHeight="45.0" prefWidth="261.0" text="Update Category" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Pane prefHeight="106.0" prefWidth="250.0" />
+            <Button alignment="BASELINE_LEFT" graphicTextGap="18.0" mnemonicParsing="false" onAction="#Retour" prefHeight="53.0" prefWidth="149.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" text="Retour" textFill="#ffffffbf" textOverrun="WORD_ELLIPSIS">
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TextField fx:id="nom" layoutX="387.0" layoutY="274.0" prefHeight="34.0" prefWidth="198.0" />
+      <Label layoutX="322.0" layoutY="274.0" prefHeight="34.0" prefWidth="63.0" text="Nom :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="357.0" layoutY="123.0" prefHeight="34.0" prefWidth="149.0" text="Updating : ID =">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button alignment="BASELINE_LEFT" graphicTextGap="18.0" layoutX="385.0" layoutY="405.0" mnemonicParsing="false" onAction="#modifyCategory" prefHeight="53.0" prefWidth="149.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" text="Update" textFill="#ffffffbf" textOverrun="WORD_ELLIPSIS">
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Button>
+      <Label fx:id="id" layoutX="506.0" layoutY="123.0" prefHeight="34.0" prefWidth="95.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="feedback" layoutX="366.0" layoutY="348.0" prefHeight="45.0" prefWidth="219.0" text="" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

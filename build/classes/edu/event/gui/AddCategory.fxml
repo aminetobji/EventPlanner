@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.event.gui.AddCategoryController">
+   <children>
+      <VBox prefHeight="556.0" prefWidth="250.0" style="-fx-background-color: #007c77;">
+         <children>
+            <Pane prefHeight="106.0" prefWidth="250.0" />
+            <Pane prefHeight="106.0" prefWidth="250.0">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="XING" layoutX="93.0" layoutY="84.0" size="80" text="" wrappingWidth="63.00000134110451" />
+               </children>
+            </Pane>
+            <Label prefHeight="45.0" prefWidth="261.0" text="Add Category" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Pane prefHeight="106.0" prefWidth="250.0" />
+            <Button alignment="BASELINE_LEFT" graphicTextGap="18.0" mnemonicParsing="false" onAction="#Retour" prefHeight="53.0" prefWidth="149.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" text="Retour" textFill="#ffffffbf" textOverrun="WORD_ELLIPSIS">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TextField fx:id="nom" layoutX="353.0" layoutY="272.0" prefHeight="34.0" prefWidth="198.0" />
+      <Label layoutX="288.0" layoutY="272.0" prefHeight="34.0" prefWidth="63.0" text="Nom :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="341.0" layoutY="132.0" prefHeight="34.0" prefWidth="198.0" text="Fill The Data Below">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button alignment="BASELINE_LEFT" graphicTextGap="18.0" layoutX="351.0" layoutY="403.0" mnemonicParsing="false" onAction="#addCategory" prefHeight="53.0" prefWidth="149.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" text="Add" textFill="#ffffffbf" textOverrun="WORD_ELLIPSIS">
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Button>
+      <Label fx:id="feedback" layoutX="343.0" layoutY="342.0" prefHeight="45.0" prefWidth="219.0" text="" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

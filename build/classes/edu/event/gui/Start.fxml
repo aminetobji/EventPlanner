@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="1103.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgfinal.gui.StartController">
+   <children>
+      <VBox prefHeight="556.0" prefWidth="1103.0" style="-fx-background-color: #007c77;">
+         <children>
+            <Pane prefHeight="103.0" prefWidth="439.0" />
+            <Pane prefHeight="211.0" prefWidth="1103.0">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="XING" layoutX="445.0" layoutY="174.0" size="200" text="" wrappingWidth="181.5714282989502" />
+               </children>
+            </Pane>
+            <Button fx:id="start" alignment="BASELINE_LEFT" graphicTextGap="18.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="250.0" stylesheets="@../../../../JavaFXApplication3/src/javafxapplication3/style.css" text="START" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="95.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="400.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
