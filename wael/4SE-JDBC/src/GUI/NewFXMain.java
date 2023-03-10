@@ -20,7 +20,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author hp
+ * @author wael
  */
 public class NewFXMain extends Application {
     
@@ -28,7 +28,7 @@ public class NewFXMain extends Application {
     public void start(Stage primaryStage) {
         
         try {
-            Parent root =FXMLLoader.load(getClass().getResource("ProduitGestion.fxml"));
+            Parent root =FXMLLoader.load(getClass().getResource("ShowProduit.fxml"));
             
             Scene scene = new Scene(root);
             
@@ -48,3 +48,4 @@ public class NewFXMain extends Application {
     }
     
 }
+

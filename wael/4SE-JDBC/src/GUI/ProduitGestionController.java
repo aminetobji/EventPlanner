@@ -5,13 +5,17 @@
  */
 package GUI;
 
+
 import DB.MyDB;
 import Entities.Produit;
 import Services.ProduitService;
+import java.awt.Desktop;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.security.NoSuchAlgorithmException;
@@ -23,12 +27,11 @@ import java.sql.Statement;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -39,6 +42,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -55,9 +59,25 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javax.imageio.ImageIO;
+
+
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter;
+
+import javafx.util.Duration;
+import tray.animations.AnimationType;
+import tray.notification.NotificationType;
+import tray.notification.TrayNotification;
+
 
 /**
  * FXML Controller class
@@ -87,6 +107,8 @@ public class ProduitGestionController implements Initializable {
     @FXML
     private Label imgpathttt;
     @FXML
+    private Button pdf2;
+    @FXML
     private Label labelid;
     @FXML
     private TextField inputRech;
@@ -96,6 +118,8 @@ public class ProduitGestionController implements Initializable {
     private Button Confirmer;
     @FXML
     private Button Timage;
+     @FXML
+    private Button  Trier_Prix; 
     @FXML
     private ImageView imgajoutincours;
  public ObservableList<Produit> list;
@@ -231,6 +255,13 @@ public class ProduitGestionController implements Initializable {
             e.setId(tableview.getSelectionModel().getSelectedItem().getId());  
           ProduitService cs = new ProduitService();
             cs.supp2(e);
+                           TrayNotification tray = new TrayNotification();
+            AnimationType type = AnimationType.SLIDE;
+            tray.setAnimationType(type);
+            tray.setTitle("Supprimer avec succés");
+            tray.setMessage("Supprimer avec succés");
+            tray.setNotificationType(NotificationType.INFORMATION);
+            tray.showAndDismiss(Duration.millis(3000));
             resetTableData();  
         
         }
@@ -269,11 +300,14 @@ inputdate_expo.setValue(  date);
     
     
     @FXML
+    @SuppressWarnings("empty-statement")
     private void Ajouter(ActionEvent event) throws SQLException {
  ProduitService productService = new ProduitService();
          java.util.Date date2
                 = java.util.Date.from(this.inputdatedispo.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
                  java.sql.Date sqlDate2 = new java.sql.Date(date2.getTime());
+                
+     
                  
                    java.util.Date date3
                 = java.util.Date.from(this.inputdate_expo.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
@@ -286,7 +320,17 @@ inputdate_expo.setValue(  date);
             a.setContentText("Please fill all fields ");
             a.setHeaderText(null);
             a.showAndWait();
-        } else if (inputtype_produit.getText().equals("")
+        } 
+         
+        else if (!inputprix_produit.getText().matches("\\d*")){
+        
+        Alert a = new Alert(Alert.AlertType.WARNING);
+            a.setContentText("le prix est float ");
+            a.setHeaderText(null);
+            a.showAndWait();
+        }
+        
+        else if (inputtype_produit.getText().equals("")
                 || inputprix_produit.getText().equals("") 
                ) {
             Alert a = new Alert(Alert.AlertType.WARNING);
@@ -315,6 +359,13 @@ inputdate_expo.setValue(  date);
        
       } else if (option.get() == ButtonType.OK) {
                   productService.ajouterProduit(c);
+                                 TrayNotification tray = new TrayNotification();
+            AnimationType type = AnimationType.SLIDE;
+            tray.setAnimationType(type);
+            tray.setTitle("Ajouté avec succés");
+            tray.setMessage("Ajouté avec succés");
+            tray.setNotificationType(NotificationType.INFORMATION);
+            tray.showAndDismiss(Duration.millis(3000));
              resetTableData();
      
 
@@ -325,9 +376,7 @@ inputdate_expo.setValue(  date);
       } else {
          this.label.setText("-");
       }
-      
 
-          
 
         }; 
         
@@ -418,6 +467,13 @@ inputdate_expo.setValue(  date);
        
       } else if (option.get() == ButtonType.OK) {
                   productService.modifierProduit(c);
+                            TrayNotification tray = new TrayNotification();
+            AnimationType type = AnimationType.SLIDE;
+            tray.setAnimationType(type);
+            tray.setTitle("Modifié avec succés");
+            tray.setMessage("Modifié avec succés");
+            tray.setNotificationType(NotificationType.INFORMATION);
+            tray.showAndDismiss(Duration.millis(3000));
              resetTableData();
      
 
@@ -463,6 +519,71 @@ inputdate_expo.setValue(  date);
         stage.setScene(scene);
         stage.show();       
     }
+    
+   
+     
+          private void printPDF() throws FileNotFoundException, DocumentException, IOException {
+        
+        Document d = new Document();
+        PdfWriter.getInstance(d, new FileOutputStream("..\\ListProduit.pdf"));
+        d.open();
+        
+        PdfPTable pTable = new PdfPTable(2);
+       
 
-  
+     
+        
+        tableview.getItems().forEach((t) -> {
+       pTable.addCell(String.valueOf(t.getDate_expo()));
+         pTable.addCell(String.valueOf(t.getNom()));
+         pTable.addCell(String.valueOf(t.getPrix()));
+    pTable.addCell(String.valueOf(t.getDate_expo()));
+    pTable.addCell(String.valueOf(t.getDate_fin()));
+    pTable.addCell(String.valueOf(t.getDisponibilite()));
+                   TrayNotification tray = new TrayNotification();
+            AnimationType type = AnimationType.SLIDE;
+            tray.setAnimationType(type);
+            tray.setTitle("PDF Envoyée avec succés");
+            tray.setMessage("PDF Envoyée avec succés");
+            tray.setNotificationType(NotificationType.INFORMATION);
+            tray.showAndDismiss(Duration.millis(3000));
+    
+    
+    
+
+
+       
+        });
+        
+                        d.add(pTable);
+
+        d.close();
+//        Desktop.getDesktop().open(new File("..\\ListRevenus.pdf"));
+
+    } 
+    
+    
+    
+    
+    
+    @FXML
+    private void pdf2(ActionEvent event) throws FileNotFoundException, DocumentException, IOException {
+         if (event.getSource() == pdf2) {
+            
+             printPDF();
+             
+            
+   
+        }
+    
 }
+     
+     
+
+    } 
+
+    
+    
+ 
+    
+

@@ -7,7 +7,7 @@ package Entities;
 
 /**
  *
- * @author Administrateur
+ * @author wael
  */
 public class typeproduit {
     private int id_typeproduit ;

@@ -6,29 +6,31 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.TypeProduitGestionController">
    <children>
-      <AnchorPane id="AnchorPane" prefHeight="594.0" prefWidth="870.0" style="-fx-background-color: #FFF0BC;" styleClass="mainFxmlClass">
+      <AnchorPane id="AnchorPane" prefHeight="594.0" prefWidth="870.0" style="-fx-background-color: #c9dcf8;" styleClass="mainFxmlClass">
          <children>
-            <Label layoutX="260.0" text="Gestion des type produits" textFill="#9c3832">
+            <Label layoutX="260.0" text="Gestion des type produits" textFill="#3664b7">
                <font>
                   <Font name="Arial Unicode MS" size="31.0" />
                </font>
             </Label>
-            <Button fx:id="supp" layoutX="466.0" layoutY="459.0" mnemonicParsing="false" onAction="#supp" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: #ff4500; -fx-background-radius: 50;" text="Supprimer" textFill="WHITE">
+            <Button fx:id="supp" layoutX="466.0" layoutY="459.0" mnemonicParsing="false" onAction="#supp" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: #65B2FF; -fx-background-radius: 50;" text="Supprimer" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="modif" layoutX="172.0" layoutY="461.0" mnemonicParsing="false" onAction="#Modif" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: #cc5500; -fx-background-radius: 50;" text="Modifier" textFill="WHITE">
+            <Button fx:id="modif" layoutX="172.0" layoutY="461.0" mnemonicParsing="false" onAction="#Modif" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: #65B2FF; -fx-background-radius: 50;" text="Modifier" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="Ajouter" layoutX="307.0" layoutY="457.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: ff8c00; -fx-background-radius: 50;" text="Ajouter" textFill="WHITE">
+            <Button fx:id="Ajouter" layoutX="307.0" layoutY="457.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #65B2FF; -fx-background-radius: 50;" text="Ajouter" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -65,6 +67,11 @@
                </font>
             </Label>
             <TextField fx:id="inputdetails" layoutX="116.0" layoutY="294.0" prefHeight="40.0" prefWidth="194.0" promptText="details" />
+            <ImageView fitHeight="99.0" fitWidth="129.0" layoutX="697.0" layoutY="466.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/wael.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

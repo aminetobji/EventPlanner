@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author Administrateur
+ * @author wael
  */
 public class Produit {
     private int id ;
@@ -57,6 +57,14 @@ public class Produit {
     }
     public Produit(int id) {
         this.id = id;
+    }
+
+    public Produit(int aInt, float aFloat, java.sql.Date date, int aInt0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Produit(int aInt, float aFloat) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public int getId_typeproduit() {
@@ -137,6 +145,18 @@ public class Produit {
 
     public void setImgproduit(String imgproduit) {
         this.imgproduit = imgproduit;
+    }
+
+    public String getImgae() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public int getId_Produit() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String getnom() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
                     

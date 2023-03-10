@@ -17,10 +17,12 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
+
 
 /**
  *
- * @author Administrateur
+ * @author wael
  */
 public class CommandeService {
        Connection connexion;   
@@ -179,7 +181,13 @@ public class CommandeService {
             } 
                return c;                 
       }   
-      
+      public boolean verifNumero(String s) {
+    return s.matches("[0-9]{8}");
+}
+
+    public List<Commande> AfficherAlldepensebyDate() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
       
       
       

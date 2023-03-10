@@ -7,7 +7,7 @@ package Entities;
 
 /**
  *
- * @author Administrateur
+ * @author wael
  */
 public class User {
     private int id;

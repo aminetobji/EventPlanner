@@ -18,7 +18,7 @@ import java.util.List;
 
 /**
  *
- * @author Administrateur
+ * @author wael
  */
 public class TypeProduitService {
         Connection connexion;   

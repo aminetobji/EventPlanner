@@ -39,6 +39,10 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import javafx.util.Duration;
+import tray.animations.AnimationType;
+import tray.notification.NotificationType;
+import tray.notification.TrayNotification;
 
 /**
  * FXML Controller class
@@ -149,7 +153,14 @@ public class TypeProduitGestionController implements Initializable {
        
       } else if (option.get() == ButtonType.OK) {
            cs.Supprimertypeproduit(rec);
-    
+            TrayNotification tray = new TrayNotification();
+            AnimationType type = AnimationType.SLIDE;
+            tray.setAnimationType(type);
+            tray.setTitle("Supprimer avec succés");
+            tray.setMessage("Supprimer avec succés");
+            tray.setNotificationType(NotificationType.INFORMATION);
+            tray.showAndDismiss(Duration.millis(3000));
+             resetTableData();
        
       } else if (option.get() == ButtonType.CANCEL) {
       
@@ -217,6 +228,14 @@ public class TypeProduitGestionController implements Initializable {
        
       } else if (option.get() == ButtonType.OK) {
                  productService.Ajoutertypeproduit(ccc);
+                         TrayNotification tray = new TrayNotification();
+            AnimationType type = AnimationType.SLIDE;
+            tray.setAnimationType(type);
+            tray.setTitle("Ajouter avec succés");
+            tray.setMessage("Ajouter avec succés");
+            tray.setNotificationType(NotificationType.INFORMATION);
+            tray.showAndDismiss(Duration.millis(3000));
+             resetTableData();
      
 
           
@@ -274,6 +293,14 @@ public class TypeProduitGestionController implements Initializable {
        
       } else if (option.get() == ButtonType.OK) {
                  productService.modifiertypeproduit(ccc);
+                         TrayNotification tray = new TrayNotification();
+            AnimationType type = AnimationType.SLIDE;
+            tray.setAnimationType(type);
+            tray.setTitle("Modifié avec succés");
+            tray.setMessage("Modifié avec succés");
+            tray.setNotificationType(NotificationType.INFORMATION);
+            tray.showAndDismiss(Duration.millis(3000));
+             resetTableData();
      
 
           

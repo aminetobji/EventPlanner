@@ -23,6 +23,7 @@ import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Properties;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
 import javafx.collections.FXCollections;
@@ -46,12 +47,18 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import javafx.util.Duration;
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
-/**
- * FXML Controller class
- *
- * @author Administrateur
- */
+import tray.animations.AnimationType;
+import tray.notification.NotificationType;
+import tray.notification.TrayNotification;
 public class CommandeGestionController implements Initializable {
 
       private Label label;
@@ -95,6 +102,12 @@ public ObservableList<Commande> list;
     private Label labelprix;
     @FXML
     private Hyperlink Produits;
+    @FXML
+    private Button afficherpardate;
+    @FXML
+    private TextField mail_tf;
+    @FXML
+    private Button envoyer;
   public CommandeGestionController() {
         connexion = MyDB.getInstance().getConnection();
     }/**
@@ -180,7 +193,15 @@ public ObservableList<Commande> list;
             e.setId(tableview.getSelectionModel().getSelectedItem().getId());  
          
             cs.SupprimerCommande(e);
-            resetTableData();  
+            
+                   TrayNotification tray = new TrayNotification();
+            AnimationType type = AnimationType.SLIDE;
+            tray.setAnimationType(type);
+            tray.setTitle("Supprimer avec succés");
+            tray.setMessage("Supprimer avec succés");
+            tray.setNotificationType(NotificationType.INFORMATION);
+            tray.showAndDismiss(Duration.millis(3000));
+             resetTableData(); 
         
         }
         
@@ -234,6 +255,14 @@ public ObservableList<Commande> list;
             a.setHeaderText(null);
             a.showAndWait();
         }
+        else if  (!inputnumero.getText().matches("\\d{8}")){
+        
+             Alert a = new Alert(Alert.AlertType.WARNING);
+            a.setContentText("le numero doit etre de 8 ");
+            a.setHeaderText(null);
+            a.showAndWait();
+       
+        }
        
             else{
 
@@ -242,13 +271,25 @@ public ObservableList<Commande> list;
                     ,sqlDate2);
         try {
             productService.ajouterCommande(c);
+                       TrayNotification tray = new TrayNotification();
+            AnimationType type = AnimationType.SLIDE;
+            tray.setAnimationType(type);
+            tray.setTitle("Ajouter avec succés");
+            tray.setMessage("Ajouter avec succés");
+            tray.setNotificationType(NotificationType.INFORMATION);
+            tray.showAndDismiss(Duration.millis(3000));
              resetTableData();
+            
         } catch (SQLException ex) {
            
         }
+        
         }
         
+        
     }
+   
+    
 
  
 
@@ -266,6 +307,14 @@ public ObservableList<Commande> list;
         
         try {
             pss.modifierCommande(c);
+                      TrayNotification tray = new TrayNotification();
+            AnimationType type = AnimationType.SLIDE;
+            tray.setAnimationType(type);
+            tray.setTitle("Modifier avec succés");
+            tray.setMessage("Modifier avec succés");
+            tray.setNotificationType(NotificationType.INFORMATION);
+            tray.showAndDismiss(Duration.millis(3000));
+             
              resetTableData();
         } catch (SQLException ex) {
            
@@ -274,6 +323,7 @@ public ObservableList<Commande> list;
         
         
     }
+    
 
     @FXML
     private void Produits(ActionEvent event) throws IOException {
@@ -285,4 +335,59 @@ public ObservableList<Commande> list;
         
     }
     
+   
+    
+    
+    public static void sendMail(String recipient,String Subject,String Text) throws MessagingException {
+        System.out.println("Preparing to send email");
+        Properties properties = new Properties();
+        properties.put("mail.smtp.auth", "true");
+        properties.put("mail.smtp.starttls.enable", "true");
+        properties.put("mail.smtp.host", "smtp.gmail.com");
+        properties.put("mail.smtp.port", "587");
+        String myAccountEmail = "rjeibi.wael@esprit.tn";
+        String password = "leuirfakmijtnhbn";
+        Session session = Session.getInstance(properties, new Authenticator() {
+             @Override
+                        protected PasswordAuthentication getPasswordAuthentication() {
+            return new PasswordAuthentication(myAccountEmail, password);
+            }
+        });
+            
+        Message message = prepareMessage(session, myAccountEmail, recipient,Subject,Text);
+
+        javax.mail.Transport.send(message);
+        System.out.println("Message sent successfully");
+              TrayNotification tray = new TrayNotification();
+            AnimationType type = AnimationType.SLIDE;
+            tray.setAnimationType(type);
+            tray.setTitle("Mail envoyée avec succés");
+            tray.setMessage("Mail envoyée avec succés");
+            tray.setNotificationType(NotificationType.INFORMATION);
+            tray.showAndDismiss(Duration.millis(3000));
+    }  
+    private static Message prepareMessage(Session session, String myAccountEmail, String recipient,String Subject,String Text) {
+        try {
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(myAccountEmail));
+            message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
+            message.setSubject(Subject);
+            message.setText(Text);
+            return message;
+        } catch (MessagingException ex) {
+          
+        }
+        return null;} 
+    
+    
+    @FXML
+    
+
+      private void Send_mail(ActionEvent event) throws IOException, MessagingException {
+                sendMail(mail_tf.getText(), "Commande confirmée", "Commande confirmée");
+    }
+   
 }
+
+    
+

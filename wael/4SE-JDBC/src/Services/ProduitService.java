@@ -20,7 +20,7 @@ import java.util.List;
 
 /**
  *
- * @author Administrateur
+ * @author wael
  */
 public class ProduitService {
     Connection connexion;   
@@ -111,7 +111,22 @@ public class ProduitService {
         ps.executeUpdate();
      
     }
-   
+
+    
+    public void supprimerProduit(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public List<Produit> listerProduits() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+  
+
+
+}
+
+  
 
  
-}
+

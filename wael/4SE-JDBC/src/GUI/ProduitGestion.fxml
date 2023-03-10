@@ -13,27 +13,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ProduitGestionController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ProduitGestionController">
    <children>
-      <AnchorPane id="AnchorPane" layoutX="-17.0" prefHeight="650.0" prefWidth="977.0" style="-fx-background-color: #FFF0BC;" styleClass="mainFxmlClass">
+      <AnchorPane id="AnchorPane" layoutX="-17.0" prefHeight="650.0" prefWidth="977.0" style="-fx-background-color: #c9dcf8;" styleClass="mainFxmlClass">
     
          <children>
-            <Label layoutX="260.0" text="Gestion des Produits" textFill="#9c3832">
+            <Label layoutX="345.0" text="Gestion des Produits" textFill="#3664b7">
                <font>
                   <Font name="Arial Unicode MS" size="31.0" />
                </font>
             </Label>
-            <Button fx:id="supp" layoutX="699.0" layoutY="519.0" mnemonicParsing="false" onAction="#supp" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: #ff4500;" text="Supprimer" textFill="WHITE">
+            <Button fx:id="supp" layoutX="699.0" layoutY="519.0" mnemonicParsing="false" onAction="#supp" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: #65B2FF;" text="Supprimer" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="modif" layoutX="424.0" layoutY="519.0" mnemonicParsing="false" onAction="#Modif" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: #cc5500;" text="Modifier" textFill="WHITE">
+            <Button fx:id="modif" layoutX="424.0" layoutY="519.0" mnemonicParsing="false" onAction="#Modif" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: #65B2FF#65B2FF;" text="Modifier" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="Ajouter" layoutX="559.0" layoutY="515.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: ff8c00;" text="Ajouter" textFill="WHITE">
+            <Button fx:id="Ajouter" layoutX="559.0" layoutY="515.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #65B2FF;" text="Ajouter" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -53,7 +53,7 @@
             <ImageView fx:id="imgajoutincours" fitHeight="76.0" fitWidth="112.0" layoutX="92.0" layoutY="501.0" pickOnBounds="true" preserveRatio="true" />
             <ComboBox fx:id="inputdisponibilite" layoutX="74.0" layoutY="305.0" prefHeight="40.0" prefWidth="199.0" promptText="Disponibilité" />
             <DatePicker fx:id="inputdatedispo" layoutX="74.0" layoutY="200.0" prefHeight="39.0" prefWidth="199.0" promptText="datedispo" />
-            <ImageView fitHeight="111.0" fitWidth="102.0" layoutX="830.0" layoutY="524.0">
+            <ImageView fitHeight="111.0" fitWidth="102.0" layoutX="97.0" layoutY="522.0">
                <image>
                   <Image url="@../images/téléchargement.jpg" />
                </image>
@@ -68,7 +68,7 @@
             <TableView fx:id="tableview" layoutX="299.0" layoutY="111.0" prefHeight="401.0" prefWidth="644.0">
                <columns>
                   <TableColumn fx:id="type_produit" prefWidth="64.79998779296875" text="nom" />
-                  <TableColumn fx:id="prix_produit" prefWidth="83.20001220703125" text="prix_produit" />
+                  <TableColumn fx:id="prix_produit" prefWidth="83.20001220703125" text="prix" />
                   <TableColumn fx:id="date_expo" prefWidth="89.59994506835938" text="date_expo" />
                   <TableColumn fx:id="date_fin" prefWidth="78.4000244140625" text="date_fin" />
                   <TableColumn fx:id="disponibilite" prefWidth="92.79998779296875" text="disponibilite" />
@@ -81,6 +81,17 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Hyperlink>
+            <Button fx:id="pdf2" layoutX="583.0" layoutY="577.0" mnemonicParsing="false" onAction="#pdf2" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: white; -fx-border-color: #65B2FF#65B2FF; -fx-border-width: 2;" text="PDF" textFill="#65b2ff">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="74.0" layoutY="22.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="157.0" text="Trier_Prix" textFill="#bc1c1c" />
+            <ImageView fitHeight="101.0" fitWidth="119.0" layoutX="844.0" layoutY="527.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/wael.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
